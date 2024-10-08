@@ -13,7 +13,7 @@ export default function Home(){
   },[])
   console.log(countries)
   return(
-    <div>
+    <div className="flex flex-row flex-wrap gap-3 pt-4 pb-4">
     {countries && countries.map((item,idx)=>(
       <Country country={item} key={idx}/>
 
