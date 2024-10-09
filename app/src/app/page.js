@@ -1,5 +1,6 @@
 "use client"
 import Country from "@/components/Country"
+import Link from "next/link"
 import { useState, useEffect } from "react"
 export default function Home(){
   const [countries, setCountries] = useState(null)
@@ -15,7 +16,9 @@ export default function Home(){
   return(
     <div className="flex flex-row flex-wrap gap-3 pt-4 pb-4">
     {countries && countries.map((item,idx)=>(
-      <Country country={item} key={idx}/>
+      <Link href={`./${item.cca2}`} key={idx}>
+      <Country country={item} />
+      </Link>
 
     ))}
     </div>
