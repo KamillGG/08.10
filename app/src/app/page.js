@@ -15,12 +15,12 @@ export default function Home(){
   console.log(countries)
   return(
     <div className="flex flex-row flex-wrap gap-3 pt-4 pb-4">
-    {countries && countries.map((item,idx)=>(
-      <Link href={`./${item.cca2}`} key={idx}>
-      <Country country={item} />
-      </Link>
+      {countries && countries.map((item,idx)=>(
+        <Link href={`./${item.cca2}`} key={idx}>
+          <Country country={item} />
+        </Link>
 
-    ))}
+      ))}
     </div>
   )
 }
