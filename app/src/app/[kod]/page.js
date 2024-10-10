@@ -23,10 +23,10 @@ export default function Strony({params}){
     },[])
     console.log(info)
     return(
-        <div className="w-full h-screen flex items-center justify-center flex-col gap-[25px] p-2">
+        <div className="w-full h-screen ">
             {load ? (<h1>Loading</h1>):(
-                <>
-                <div className="p-3 border border-black h-[1000px]">
+                <div className="flex items-center justify-center flex-col gap-[25px] p-2">
+                <div className="p-3 border border-black">
                 <div className="relative w-[600px] h-[300px] border border-black">
                     <Image layout="fill" src={info[0].flags.png} alt="Flaga" objectFit="contain"/>
                 </div>
@@ -42,7 +42,7 @@ export default function Strony({params}){
                         <Border key={idx} code={item}/>
                     ))}
                 </div>
-                </>
+                </div>
             )}
         </div>
     )
